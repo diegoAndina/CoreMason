@@ -1,0 +1,6 @@
+{
+    "sobe-e-desce": {
+      "script": "document.querySelector('{{elemento}}').animate([ { transform: 'translateY(0px)' }, { transform: 'translateY(-10px)' }, { transform: 'translateY(0px)' } ], { duration: 1000, iterations: Infinity });"
+    }
+  }
+  

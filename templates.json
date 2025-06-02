@@ -1,0 +1,9 @@
+{
+  "artigos_cards": "<div class='container {{tema}} p-4'><h1 class='text-2xl font-bold mb-4'>Lista de Artigos</h1><div class='grid gap-4'>{{conteudoItens}}</div></div>",
+  "perfil_usuario": "<div class='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md'><h2 class='text-xl font-semibold'>{{nome}}</h2><p class='text-gray-600'>Idade: {{idade}}</p><p class='text-gray-600'>Cidade: {{cidade}}</p></div>",
+  "menu": "<nav class='bg-gray-800 p-4 text-white'><a href='#/home' class='mr-4 hover:text-gray-300'>&lt;Home&gt;</a><a href='#/sobre' class='mr-4 hover:text-gray-300'>&lt;Sobre&gt;</a><a href='#/contato' class='hover:text-gray-300'>&lt;Contato&gt;</a></nav>",
+  "home": "<div class='p-6'><h1 class='text-3xl font-bold mb-4'>Bem-vindo à Página Inicial</h1><p class='mb-4'>Esta é a página inicial do nosso site.</p><a href='#/artigos' class='text-blue-600 hover:underline'>Ver artigos</a></div>",
+  "sobre": "<div class='p-6'><h1 class='text-3xl font-bold mb-4'>Sobre Nós</h1><p class='mb-4'>{{descricao || 'Informações sobre nossa empresa.'}}</p></div>",
+  "contato": "<div class='p-6'><h1 class='text-3xl font-bold mb-4'>Contato</h1><p class='mb-4'>Entre em contato conosco através do e-mail: {{email || 'contato@exemplo.com'}}</p></div>",
+  "titulo-futurista": "<div class='{{tema}} p-6 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300'>\n    <h1 class='text-4xl font-extrabold mb-2 text-center'>{{titulo}}</h1>\n    {{#subtitulo}}\n    <p class='text-xl text-center mb-4 opacity-90'>{{subtitulo}}</p>\n    {{/subtitulo}}\n    {{#conteudo}}\n    <div class='mt-6 text-center'>\n      {{conteudo}}\n    </div>\n    {{/conteudo}}\n  </div>"
+}

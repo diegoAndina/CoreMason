@@ -1,0 +1,6 @@
+{
+    "/home": { "template": "home", "dados": {} },
+    "/sobre": { "template": "sobre", "dados": { "descricao": "Somos uma empresa inovadora!" } },
+    "/contato": { "template": "contato", "dados": { "email": "contato@empresa.com" } }
+  }
+  
