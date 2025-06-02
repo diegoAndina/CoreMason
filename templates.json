@@ -1,3 +1,41 @@
 {
-  "cabecalho1": "<header class='{{tema}} p-4'>\n    {{#dados}}\n    <div class='container mx-auto'>\n      {{dados}}\n    </div>\n    {{/dados}}\n  </header>"
+  "cabecalho1": {
+    "html": "<header class='bg-blue-500 text-white p-4'>\n    <div class='container mx-auto'>\n      <h1 class='text-2xl font-bold'>Meu Site</h1>\n    </div>\n  </header>",
+    "estilos": {
+      "fundo": "bg-blue-500",
+      "texto": "text-white",
+      "tamanho": "text-2xl",
+      "fonte": "font-bold"
+    }
+  },
+  "cabecalho2": {
+    "html": "<header class='bg-gray-900 text-white p-4'>\n    <div class='container mx-auto flex justify-between items-center'>\n      <div class='flex items-center'>\n        <h1 class='text-2xl font-bold'>Meu Site</h1>\n      </div>\n      <nav class='flex space-x-4'>\n        <a href='#home' class='hover:text-gray-300'>Home</a>\n        <a href='#sobre' class='hover:text-gray-300'>Sobre</a>\n        <a href='#contato' class='hover:text-gray-300'>Contato</a>\n      </nav>\n    </div>\n  </header>",
+    "estilos": {
+      "fundo": "bg-gray-900",
+      "texto": "text-white",
+      "nav": "hover:text-gray-300"
+    }
+  },
+  "cabecalho3": {
+    "html": "<header class='bg-white shadow-lg p-4'>\n    <div class='container mx-auto flex justify-between items-center'>\n      <div class='flex items-center'>\n        <h1 class='text-xl font-bold text-gray-800'>Meu Site</h1>\n      </div>\n      <div class='flex space-x-4'>\n        <button class='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'>Login</button>\n        <button class='px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600'>Registrar</button>\n      </div>\n    </div>\n  </header>",
+    "estilos": {
+      "fundo": "bg-white",
+      "texto": "text-gray-800",
+      "botoes": {
+        "login": "bg-blue-500 hover:bg-blue-600",
+        "registrar": "bg-green-500 hover:bg-green-600"
+      }
+    }
+  },
+  "cabecalho4": {
+    "html": "<header class='bg-white shadow-lg p-4'>\n    <div class='container mx-auto flex justify-between items-center'>\n      <div class='flex items-center'>\n        <h1 class='text-xl font-bold text-gray-800'>Meu Site</h1>\n      </div>\n      <div class='flex space-x-4'>\n        <div class='relative group'>\n          <span class='px-4 py-2 bg-gray-100 rounded hover:bg-gray-200'>Menu</span>\n          <div class='absolute right-0 mt-2 w-48 bg-white rounded shadow-lg group-hover:opacity-100 opacity-0 transition-opacity'>\n            <a href='#produtos' class='block px-4 py-2 hover:bg-gray-100'>Produtos</a>\n            <a href='#servicos' class='block px-4 py-2 hover:bg-gray-100'>Serviços</a>\n            <a href='#sobre' class='block px-4 py-2 hover:bg-gray-100'>Sobre</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </header>",
+    "estilos": {
+      "fundo": "bg-white",
+      "texto": "text-gray-800",
+      "menu": {
+        "botao": "bg-gray-100 hover:bg-gray-200",
+        "itens": "hover:bg-gray-100"
+      }
+    }
+  }
 }

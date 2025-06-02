@@ -40,23 +40,29 @@
         throw new Error(`Template '${parametros.template}' não encontrado`);
       }
 
-      // Substitui as variáveis no template
-      let html = template;
-      
-      // Primeiro, processa condições especiais como {{#var}}conteúdo{{/var}}
-      Object.entries(parametros.dados).forEach(([key, value]) => {
-        const conditionRegex = new RegExp(`\\{\\{#${key}\\}\\}([\\s\\S]*?)\\{\\{/${key}\\}\\}`, 'g');
-        html = html.replace(conditionRegex, value ? '$1' : '');
+      // Cria uma cópia do HTML do template
+      let html = template.html;
+
+      // Substitui as classes de estilo
+      Object.entries(template.estilos).forEach(([chave, valor]) => {
+        if (typeof valor === 'string') {
+          // Substitui a classe simples
+          const regex = new RegExp(`\\b${valor}\\b`, 'g');
+          html = html.replace(regex, parametros.dados[chave] || valor);
+        } else if (typeof valor === 'object') {
+          // Para objetos de estilos (como botões ou menu)
+          Object.entries(valor).forEach(([subchave, subvalor]) => {
+            const regex = new RegExp(`\\b${subvalor}\\b`, 'g');
+            const novaClasse = parametros.dados[subchave] || subvalor;
+            html = html.replace(regex, novaClasse);
+          });
+        }
       });
-      
-      // Depois, substitui as variáveis simples {{var}}
-      Object.entries(parametros.dados).forEach(([key, value]) => {
-        const valueToInsert = typeof value === 'string' && value.startsWith('/')
-          ? `<a href="#${value}" class="text-blue-500 hover:underline">${value}</a>`
-          : value;
-          
-        html = html.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), valueToInsert || '');
-      });
+
+      // Substitui o título
+      if (parametros.dados.titulo) {
+        html = html.replace(/Meu Site/g, parametros.dados.titulo);
+      }
 
       // Insere o HTML no container
       const container = document.getElementById('app') || document.body;
