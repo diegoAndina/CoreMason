@@ -1,9 +1,14 @@
-
 renderizar({
-  template: "titulo-futurista",
+  template: "cabecalho1",
   dados: {
-    titulo: "Teste 5",
-    subtitulo: "sabia que isso é um texto qualquer",
-    
+    tema: "bg-yellow-300",
+    dados: "Meu Site"
+  }
+});
+renderizar({
+  template: "cabecalho1",
+  dados: {
+    tema: "bg-yellow-300 text-white shadow-lg",
+    dados: "Meu Site 2"
   }
 });
